@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ItemList from './components/ItemList';
 import ItemForm from './components/ItemForm';
+import './App.css';
 
 const App: React.FC = () => {
   const [refresh, setRefresh] = useState(false);
