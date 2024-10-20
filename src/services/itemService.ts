@@ -1,7 +1,7 @@
 import api from './api';
 
 export interface Item {
-  id: number;
+  ID: number;
   name: string;
   bought: boolean;
 }
@@ -11,7 +11,7 @@ export const getItems = async () => {
   return response.data;
 };
 
-export const createItem = async (item: Omit<Item, 'id'>) => {
+export const createItem = async (item: Omit<Item, 'ID'>) => {
   const response = await api.post<Item>('/items', item);
   return response.data;
 };

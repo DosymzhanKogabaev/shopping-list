@@ -28,14 +28,14 @@ const ItemList: React.FC = () => {
       <h2>Shopping List</h2>
       <ul>
         {items.map((item) => (
-          <li key={item.id}>
+          <li key={item.ID}>
             <span style={{ textDecoration: item.bought ? 'line-through' : 'none' }}>
               {item.name}
             </span>
-            <button onClick={() => handleToggleBought(item.id, item.bought)}>
+            <button onClick={() => handleToggleBought(item.ID, item.bought)}>
               {item.bought ? 'Unmark' : 'Mark as Bought'}
             </button>
-            <button onClick={() => handleDelete(item.id)}>Delete</button>
+            <button onClick={() => handleDelete(item.ID)}>Delete</button>
           </li>
         ))}
       </ul>
